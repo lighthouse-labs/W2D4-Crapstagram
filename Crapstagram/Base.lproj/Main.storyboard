@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-Uu-qda">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Click me to say Hello">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="106" y="265" width="189" height="69"/>
+                                </variation>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="SLA-uI-HWp">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="ktu-n7-ZqG"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ktu-n7-ZqG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ktu-n7-ZqG"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sayHello:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oOj-Iv-WMl"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50b-Se-uHE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Take a Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xrd-jz-zpS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="suD-g2-gfL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="20" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="50b-Se-uHE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="120" id="2Fd-ZI-lsS">
+                                <variation key="widthClass=compact" constant="186"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Dje-Uu-qda" secondAttribute="centerX" constant="-0.5" id="32x-lW-2XU"/>
+                            <constraint firstAttribute="centerX" secondItem="50b-Se-uHE" secondAttribute="centerX" constant="-0.5" id="DS3-Gk-3LA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SLA-uI-HWp" secondAttribute="bottom" constant="183" id="H9C-aX-MKp"/>
+                            <constraint firstAttribute="centerX" secondItem="SLA-uI-HWp" secondAttribute="centerX" id="KUE-GF-DhY"/>
+                            <constraint firstItem="Dje-Uu-qda" firstAttribute="top" secondItem="50b-Se-uHE" secondAttribute="bottom" constant="95" id="wZV-o2-z6z">
+                                <variation key="widthClass=compact" constant="29"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Dje-Uu-qda"/>
+                                <exclude reference="SLA-uI-HWp"/>
+                                <exclude reference="50b-Se-uHE"/>
+                                <exclude reference="suD-g2-gfL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2Fd-ZI-lsS"/>
+                                <exclude reference="DS3-Gk-3LA"/>
+                                <exclude reference="32x-lW-2XU"/>
+                                <exclude reference="wZV-o2-z6z"/>
+                                <exclude reference="KUE-GF-DhY"/>
+                                <exclude reference="H9C-aX-MKp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Dje-Uu-qda"/>
+                                <include reference="SLA-uI-HWp"/>
+                                <include reference="50b-Se-uHE"/>
+                                <include reference="suD-g2-gfL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2Fd-ZI-lsS"/>
+                                <include reference="DS3-Gk-3LA"/>
+                                <include reference="32x-lW-2XU"/>
+                                <include reference="wZV-o2-z6z"/>
+                                <include reference="KUE-GF-DhY"/>
+                                <include reference="H9C-aX-MKp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="helloButton" destination="Dje-Uu-qda" id="3m2-tL-pig"/>
+                        <outlet property="selectedImage" destination="suD-g2-gfL" id="w3R-w5-VMf"/>
+                        <outlet property="slider" destination="SLA-uI-HWp" id="rGi-a1-oHu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="273"/>
+        </scene>
+    </scenes>
+</document>
